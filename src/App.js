@@ -1,11 +1,7 @@
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
-import Explore from "./pages/Explore";
 import { BrowserRouter, Route } from "react-router-dom";
-import ProjectsPage from "./pages/ProjectsPage";
-import Project from "./components/Project";
 import { data } from "./assests/data";
-import Contact from "./pages/Contact";
 
 export const names = [];
 
@@ -18,10 +14,11 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* <Particle /> */}
       <Route path="/" exact>
         <LandingPage />
       </Route>
-      <Route path="/explore" exact>
+      {/* <Route path="/explore" exact>
         <Explore />
       </Route>
       <Route path="/project" exact>
@@ -32,7 +29,7 @@ function App() {
       </Route>
       <Route path="/contact" exact>
         <Contact />
-      </Route>
+      </Route> */}
     </BrowserRouter>
   );
 }
