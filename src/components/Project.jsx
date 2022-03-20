@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { data } from "../assests/data";
 import Card from "./Card";
-import Header from "./Header";
 
 const Project = () => {
   const history = useHistory();
