@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -17,7 +15,6 @@ const Contact = () => {
 
   return (
     <div className="h-screen bg-primary">
-      <Header />
       <div className="bg-primary flex items-center">
         <div className="w-1/2 text-white py-40 px-20">
           <h1 className="text-sm sm:text-4xl md:text-6xl  mt-5 font-extrabold">
@@ -92,8 +89,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

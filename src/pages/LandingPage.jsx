@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import Project from "../components/Project";
+import Explore from "../pages/Explore";
 
 const LandingPage = () => {
   return (
-    <div className="bg-primaryBlue primaryfont space-y-1  px-3 sm:px-20 md:px-40 lg:px-60">
+    <div className="bg-primaryBlue min-h-screen primaryfont px-3 ">
       <Header />
       <HeroSection />
-
-      <div className="h-screen bg-primaryBlue"></div>
+      {/* <div className="h-0.5 bg-primaryGray"></div> */}
+      <Explore />
+      <Project />
+      {/* <Contact /> */}
     </div>
   );
 };

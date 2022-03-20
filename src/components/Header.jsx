@@ -5,7 +5,7 @@ import "./header.css";
 const Header = () => {
   const history = useHistory();
 
-  const [showLoader, setshowLoader] = useState(true);
+  const [showLoader, setshowLoader] = useState(false);
   const [isOpen, setisOpen] = useState(false);
 
   const path = history.location.pathname.split("/")[1];
@@ -27,7 +27,7 @@ const Header = () => {
         </div>
       )}
 
-      <div className="">
+      <div className="bg-primaryBlue fixed w-full z-50 opacity-100">
         {/* <div className="h-20 pt-5 flex justify-between items-center text-white bg-primaryBlue w-full ">
           <div className="text-4xl font-semibold text-white logo ">Logo</div>
 
@@ -69,7 +69,7 @@ const Header = () => {
           </div>
         </div> */}
 
-        <nav className="container mx-auto px-6 py-3">
+        <nav className=" mx-auto px-6 py-3">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center">
             <div className="flex justify-between items-center">
               <div className="flex items-center">
@@ -108,25 +108,25 @@ const Header = () => {
               <div className="flex flex-col space-y-5 md:space-y-0 mt-2 md:flex-row md:mt-0 md:mx-1">
                 <a
                   className="my-1 w-fit md:w-full link text-primaryGray leading-5 hover:text-primaryRed  md:mx-4 md:my-0"
-                  href=" "
+                  href="/"
                 >
                   Home
                 </a>
                 <a
                   className="my-1 w-fit md:w-full link text-primaryGray leading-5 hover:text-primaryRed  md:mx-4 md:my-0"
-                  href=" "
+                  href="/explore"
                 >
-                  Work
+                  Explore
                 </a>
                 <a
                   className="my-1 w-fit md:w-full link text-primaryGray leading-5 hover:text-primaryRed  md:mx-4 md:my-0"
-                  href=" "
+                  href="/projects"
                 >
                   Projects
                 </a>
                 <a
                   className="my-1 w-fit md:w-full link text-primaryGray leading-5 hover:text-primaryRed  md:mx-4 md:my-0"
-                  href=" "
+                  href="/contact"
                 >
                   Contact
                 </a>

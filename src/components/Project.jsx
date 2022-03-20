@@ -13,28 +13,26 @@ const Project = () => {
   console.log(project);
 
   useEffect(() => {
-    const newData = data.filter((each) => each.name === path);
+    const newData = data.filter((each) => each?.name === path);
     setProject(newData[0]);
   }, [path]);
 
   return (
     <>
-      <Header />
-      <div className=" bg-primary ">
-        
+      <div className=" bg- min-h-screen ">
         <div className="bg-primary flex items-center">
           <div className="w-1/2 text-white py-40 px-20">
             <h1 className="text-sm sm:text-4xl md:text-6xl  mt-5 font-extrabold">
-              {project.name}
+              {project?.name}
             </h1>
             <p className="pt-3 text-lg font-light text-purple-200">
-              {project.desc}
+              {project?.desc}
             </p>
 
             <div className="w-full flex justify-start mt-5">
-              {project.github && (
+              {project?.github && (
                 <a
-                  href={`${project.github}`}
+                  href={`${project?.github}`}
                   target="_blank"
                   rel="noreferrer"
                   className="bg-red-200 cursor-pointer text-center text-black mr-4 w-60 py-4 rounded-md border-2 border-red-200 hover:bg-primary box-border hover:text-red-200 hover:border-red-200"
@@ -43,9 +41,9 @@ const Project = () => {
                 </a>
               )}
 
-              {project.live && (
+              {project?.live && (
                 <a
-                  href={`${project.live}`}
+                  href={`${project?.live}`}
                   target="_blank"
                   rel="noreferrer"
                   className="bg-primary cursor-pointer text-center text-red-200 border-2 w-60 border-red-200 hover:bg-red-200 hover:text-black py-4 rounded-md"
@@ -57,7 +55,7 @@ const Project = () => {
           </div>
 
           <div className="w-1/2 h-fit pl-20 bg-primary text-center text-white">
-            <Card name={project.name} desc={project.desc} />
+            <Card name={project?.name} desc={project?.desc} />
           </div>
         </div>
 
@@ -67,7 +65,7 @@ const Project = () => {
               Let's talk about the project
             </h1>
             <p className="pt-3 text-base font-light text-purple-200">
-              {project.desc}
+              {project?.desc}
             </p>
           </div>
 
@@ -78,7 +76,6 @@ const Project = () => {
             <div>Images Here</div>
           </div>
         </div>
-      
       </div>
     </>
   );
